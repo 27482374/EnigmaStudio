@@ -1,31 +1,7 @@
-const cursor=document.querySelector('.cursor');
-let mx=innerWidth/2,my=innerHeight/2,cx=mx,cy=my;
-addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY});
-function cursorLoop(){cx+=(mx-cx)*.16;cy+=(my-cy)*.16;if(cursor)cursor.style.transform=`translate3d(${cx}px,${cy}px,0) translate(-50%,-50%)`;requestAnimationFrame(cursorLoop)}cursorLoop();
-document.querySelectorAll('a,button,.file').forEach(el=>{el.addEventListener('mouseenter',()=>cursor?.classList.add('big'));el.addEventListener('mouseleave',()=>cursor?.classList.remove('big'))});
-
-const files=[...document.querySelectorAll('.file')];
-files.forEach((card,i)=>{
- let down=false,ox=0,oy=0,baseX=0,baseY=0;
- card.addEventListener('pointerdown',e=>{
-   if(e.target.closest('button'))return;
-   down=true;card.classList.add('dragging');card.setPointerCapture(e.pointerId);
-   const r=card.getBoundingClientRect();ox=e.clientX-r.left;oy=e.clientY-r.top;baseX=r.left;baseY=r.top;
- });
- card.addEventListener('pointermove',e=>{
-   if(!down)return;
-   card.style.left=(e.clientX-ox-card.parentElement.getBoundingClientRect().left)+'px';
-   card.style.top=(e.clientY-oy-card.parentElement.getBoundingClientRect().top)+'px';
-   card.style.transform='rotate(0deg)';
- });
- card.addEventListener('pointerup',()=>{down=false;card.classList.remove('dragging')});
-});
-document.querySelectorAll('.file button').forEach(btn=>btn.addEventListener('click',()=>{
- const card=btn.closest('.file');card.classList.toggle('opened');
- btn.textContent=card.classList.contains('opened')?'DOSSIER OUVERT ✓':'OUVRIR LE DOSSIER ↗';
-}));
-const clock=document.getElementById('clock');
-function tick(){const d=new Date();clock.textContent=d.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})}tick();setInterval(tick,1000);
-const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in') }),{threshold:.12});
-document.querySelectorAll('.hero h1,.file,.statement,.manifest h2,.contact-main h2').forEach(x=>observer.observe(x));
+const cursor=document.createElement('div');cursor.className='site-cursor';document.body.appendChild(cursor);
+let x=innerWidth/2,y=innerHeight/2,cx=x,cy=y;addEventListener('pointermove',e=>{x=e.clientX;y=e.clientY});
+(function loop(){cx+=(x-cx)*.15;cy+=(y-cy)*.15;cursor.style.transform=`translate3d(${cx}px,${cy}px,0)`;requestAnimationFrame(loop)})();
+const style=document.createElement('style');style.textContent='.site-cursor{position:fixed;left:0;top:0;width:12px;height:12px;border:1px solid #e45139;border-radius:50%;pointer-events:none;z-index:100;transform:translate(-50%,-50%);mix-blend-mode:difference;transition:width .2s,height .2s}.site-cursor:after{content:"";position:absolute;inset:4px;background:#e45139;border-radius:50%}a:hover~.site-cursor{width:35px;height:35px}';document.head.appendChild(style);
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.feature,.cards article,.studio-image,.studio-copy,.news article,.contact h2').forEach(e=>{e.classList.add('reveal');io.observe(e)});
 document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'})}}));
