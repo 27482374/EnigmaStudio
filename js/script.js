@@ -1,7 +1,27 @@
-const cursor=document.createElement('div');cursor.className='site-cursor';document.body.appendChild(cursor);
-let x=innerWidth/2,y=innerHeight/2,cx=x,cy=y;addEventListener('pointermove',e=>{x=e.clientX;y=e.clientY});
-(function loop(){cx+=(x-cx)*.15;cy+=(y-cy)*.15;cursor.style.transform=`translate3d(${cx}px,${cy}px,0)`;requestAnimationFrame(loop)})();
-const style=document.createElement('style');style.textContent='.site-cursor{position:fixed;left:0;top:0;width:12px;height:12px;border:1px solid #e45139;border-radius:50%;pointer-events:none;z-index:100;transform:translate(-50%,-50%);mix-blend-mode:difference;transition:width .2s,height .2s}.site-cursor:after{content:"";position:absolute;inset:4px;background:#e45139;border-radius:50%}a:hover~.site-cursor{width:35px;height:35px}';document.head.appendChild(style);
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
-document.querySelectorAll('.feature,.cards article,.studio-image,.studio-copy,.news article,.contact h2').forEach(e=>{e.classList.add('reveal');io.observe(e)});
-document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'})}}));
+document.documentElement.classList.add('js');
+const nav=document.querySelector('.nav');
+const menu=document.querySelector('.menu');
+const links=[...document.querySelectorAll('.nav nav a')];
+let last=0;
+addEventListener('scroll',()=>{const y=scrollY;nav.classList.toggle('compact',y>40);nav.classList.toggle('hide',y>last&&y>260);last=y},{passive:true});
+menu?.addEventListener('click',()=>document.body.classList.toggle('nav-open'));
+links.forEach(a=>a.addEventListener('click',()=>document.body.classList.remove('nav-open')));
+
+const reveal=new IntersectionObserver(entries=>{
+ entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');reveal.unobserve(entry.target)}})
+},{threshold:.14});
+document.querySelectorAll('.main-game,.project-card,.studio-head,.studio-body,.news-list article,.contact h2').forEach(el=>{
+ el.classList.add('reveal');reveal.observe(el);
+});
+
+const visual=document.querySelector('.hero-visual');
+visual?.addEventListener('pointermove',e=>{
+ const r=visual.getBoundingClientRect();
+ const px=(e.clientX-r.left)/r.width-.5,py=(e.clientY-r.top)/r.height-.5;
+ visual.style.setProperty('--mx',px.toFixed(3));visual.style.setProperty('--my',py.toFixed(3));
+});
+visual?.addEventListener('pointerleave',()=>{visual.style.setProperty('--mx',0);visual.style.setProperty('--my',0)});
+
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+ const target=document.querySelector(a.getAttribute('href'));if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth'})}
+}));
