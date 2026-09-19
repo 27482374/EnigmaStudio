@@ -1,332 +1,217 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-  <!-- ============================================= -->
-  <!-- ENIGMA STUDIO — MAIN DOCUMENT                -->
-  <!-- ============================================= -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Enigma Studio — independent game studio creating original interactive experiences.">
-  <title>Enigma Studio — Independent Game Studio</title>
-
-  <!-- ============================================= -->
-  <!-- FONTS                                         -->
-  <!-- ============================================= -->
+  <meta name="description" content="Enigma Studio — studio indépendant de création de jeux vidéo.">
+  <title>Enigma Studio — Créer des mondes</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
-
-  <!-- ============================================= -->
-  <!-- STYLES                                        -->
-  <!-- ============================================= -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <!-- ============================================= -->
-  <!-- CUSTOM CURSOR                                 -->
-  <!-- ============================================= -->
-  <div class="cursor" aria-hidden="true">
-    <span class="cursor-dot"></span>
-    <span class="cursor-label">VIEW</span>
+  <!-- =========================================================
+       ENIGMA STUDIO — SITE VITRINE
+       DA : tropicale contemporaine / studio indépendant
+  ========================================================== -->
+
+  <div class="loader" id="loader">
+    <div class="loader-mark">E</div>
+    <span>ENIGMA STUDIO</span>
   </div>
 
-  <!-- ============================================= -->
-  <!-- PAGE TRANSITION                               -->
-  <!-- ============================================= -->
-  <div class="page-transition" aria-hidden="true">
-    <span>ENIGMA</span>
-  </div>
+  <div class="leaf leaf-a"></div>
+  <div class="leaf leaf-b"></div>
 
-  <!-- ============================================= -->
-  <!-- NAVIGATION                                    -->
-  <!-- ============================================= -->
-  <header class="site-header">
-    <a class="brand magnetic" href="#top" aria-label="Enigma Studio home">
-      <span class="brand-mark">E</span>
-      <span class="brand-name">ENIGMA</span>
+  <header class="nav">
+    <a class="brand" href="#accueil" aria-label="Enigma Studio">
+      <span class="brand-symbol">E</span>
+      <span>ENIGMA<br><small>STUDIO</small></span>
     </a>
 
-    <nav class="main-nav" aria-label="Main navigation">
-      <a class="nav-link magnetic" href="#work">Work</a>
-      <a class="nav-link magnetic" href="#studio">Studio</a>
-      <a class="nav-link magnetic" href="#careers">Careers</a>
+    <nav>
+      <a href="#projets">Projets</a>
+      <a href="#studio">Le studio</a>
+      <a href="#equipe">Équipe</a>
+      <a href="#contact">Contact</a>
     </nav>
 
-    <a class="header-contact magnetic" href="#contact">Contact <span>↗</span></a>
+    <a class="nav-cta" href="#recrutement">Nous rejoindre <span>↗</span></a>
   </header>
 
-  <!-- ============================================= -->
-  <!-- MAIN                                          -->
-  <!-- ============================================= -->
-  <main id="top">
-
-    <!-- =========================================== -->
-    <!-- HERO                                        -->
-    <!-- =========================================== -->
-    <section class="hero section">
-      <div class="hero-meta">
-        <span>Independent Game Studio</span>
-        <span>Est. 2024 / France</span>
-      </div>
-
+  <main>
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+    <section class="hero" id="accueil">
       <div class="hero-copy">
-        <p class="eyebrow reveal">Games / Systems / Worlds</p>
-
-        <h1 class="hero-title">
-          <span class="line reveal">We build</span>
-          <span class="line reveal"><em>worlds.</em></span>
-        </h1>
-
-        <p class="hero-description reveal">
-          Enigma is an independent studio creating original games and
-          interactive experiences with a focus on identity, atmosphere
-          and meaningful gameplay.
+        <p class="eyebrow"><span></span> Studio indépendant · France</p>
+        <h1>Des mondes<br><em>à découvrir.</em></h1>
+        <p class="hero-text">
+          Enigma imagine et développe des expériences vidéoludiques
+          originales, avec une attention particulière portée à l'univers,
+          au gameplay et aux petits détails.
         </p>
-
-        <a class="text-link magnetic reveal" href="#work">
-          <span>Explore our work</span>
-          <span class="link-arrow">↘</span>
-        </a>
-      </div>
-
-      <!-- ========================================= -->
-      <!-- ABSTRACT ENIGMA OBJECT                    -->
-      <!-- ========================================= -->
-      <div class="hero-object" aria-hidden="true">
-        <div class="orb orb-a"></div>
-        <div class="orb orb-b"></div>
-        <div class="orb orb-c"></div>
-        <div class="object-ring ring-a"></div>
-        <div class="object-ring ring-b"></div>
-        <div class="object-core">E</div>
-      </div>
-
-      <div class="hero-footer">
-        <span>Scroll to discover</span>
-        <span class="scroll-line"></span>
-        <span>01 — 05</span>
-      </div>
-    </section>
-
-    <!-- =========================================== -->
-    <!-- MANIFESTO                                   -->
-    <!-- =========================================== -->
-    <section class="manifesto section">
-      <div class="section-index">01 / 05</div>
-
-      <div class="manifesto-content">
-        <p class="eyebrow">Our approach</p>
-        <h2>Ideas deserve<br><em>their own world.</em></h2>
-        <p class="large-copy">
-          We don't want to make another game that feels like everything else.
-          Every project starts with a question: what can we make that could
-          only exist as Enigma?
-        </p>
-      </div>
-
-      <div class="manifesto-note">
-        <span class="note-line"></span>
-        <span>Originality is a process,<br>not a visual effect.</span>
-      </div>
-    </section>
-
-    <!-- =========================================== -->
-    <!-- WORK                                        -->
-    <!-- =========================================== -->
-    <section id="work" class="work section">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">Selected work</p>
-          <h2>Projects<span class="accent">.</span></h2>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#projets">Voir nos projets <span>↓</span></a>
+          <a class="text-link" href="#studio">Découvrir Enigma <span>↗</span></a>
         </div>
-        <span class="section-index">02 / 05</span>
       </div>
 
-      <article class="project project-featured" data-cursor="OPEN">
-        <div class="project-visual project-visual-one">
-          <div class="project-grid"></div>
-          <div class="project-symbol">01</div>
-          <span class="project-status">IN DEVELOPMENT</span>
+      <div class="hero-art" aria-hidden="true">
+        <div class="sun"></div>
+        <div class="island">
+          <div class="mountain mountain-one"></div>
+          <div class="mountain mountain-two"></div>
+          <div class="palm palm-one"><i></i><b></b><strong></strong></div>
+          <div class="palm palm-two"><i></i><b></b><strong></strong></div>
+        </div>
+        <div class="water-line"></div>
+        <span class="art-label">ENIGMA / 2026</span>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         INTRO
+    ====================================================== -->
+    <section class="intro">
+      <p class="section-number">01 / NOTRE APPROCHE</p>
+      <div>
+        <h2>Créer quelque chose<br><span>qui reste.</span></h2>
+        <p>
+          Nous ne cherchons pas seulement à faire fonctionner un jeu.
+          Nous voulons construire des univers reconnaissables, des mécaniques
+          qui donnent envie de continuer et des expériences dont on se souvient.
+        </p>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         PROJETS
+    ====================================================== -->
+    <section class="projects" id="projets">
+      <div class="section-head">
+        <div>
+          <p class="section-number">02 / PROJETS</p>
+          <h2>Nos <span>univers.</span></h2>
+        </div>
+        <p>Des projets en développement, des prototypes et des idées qui prennent forme.</p>
+      </div>
+
+      <article class="project project-main">
+        <div class="project-visual jungle">
+          <div class="project-stamp">ENIGMA<br>PROJECT</div>
+          <div class="jungle-sun"></div>
+          <div class="jungle-hill"></div>
+          <div class="jungle-palm"></div>
         </div>
         <div class="project-info">
-          <div>
-            <span class="project-number">01</span>
-            <h3>Untitled<br><em>Experience</em></h3>
-          </div>
-          <div class="project-details">
-            <span>Roblox / Original</span>
-            <span>Game Development</span>
-            <a href="#contact" class="project-link magnetic">View project ↗</a>
-          </div>
+          <p class="project-index">01 — EN DÉVELOPPEMENT</p>
+          <h3>Un premier monde<br>à explorer.</h3>
+          <p>Un projet original mêlant exploration, progression et identité visuelle tropicale.</p>
+          <span class="project-tag">Roblox · Jeu original</span>
         </div>
       </article>
 
-      <div class="project-list">
-        <article class="project project-small" data-cursor="SOON">
-          <div class="small-visual visual-two">
-            <span>02</span>
-          </div>
-          <div class="small-info">
-            <span class="project-number">02</span>
-            <h3>Project <em>Two</em></h3>
-            <span>Coming soon</span>
-          </div>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="card-art lagoon"><span>PROTOTYPE</span></div>
+          <div class="card-copy"><small>02 / CONCEPT</small><h3>Expériences<br>interactives</h3><p>Des idées courtes pour tester de nouvelles mécaniques.</p></div>
         </article>
-
-        <article class="project project-small" data-cursor="SOON">
-          <div class="small-visual visual-three">
-            <span>03</span>
-          </div>
-          <div class="small-info">
-            <span class="project-number">03</span>
-            <h3>Project <em>Three</em></h3>
-            <span>Coming soon</span>
-          </div>
+        <article class="project-card">
+          <div class="card-art coral"><span>À VENIR</span></div>
+          <div class="card-copy"><small>03 / RECHERCHE</small><h3>De nouveaux<br>horizons</h3><p>Le prochain univers est encore en train de prendre forme.</p></div>
         </article>
       </div>
     </section>
 
-    <!-- =========================================== -->
-    <!-- STUDIO                                      -->
-    <!-- =========================================== -->
-    <section id="studio" class="studio section">
-      <div class="section-index">03 / 05</div>
-
-      <div class="studio-layout">
-        <div class="studio-heading">
-          <p class="eyebrow">The studio</p>
-          <h2>Small team.<br><em>Big intent.</em></h2>
-        </div>
-
-        <div class="studio-copy">
-          <p class="large-copy">
-            Enigma is an independent game studio built around a simple belief:
-            a small team can create something memorable when every detail has
-            a reason to exist.
-          </p>
-
-          <div class="principles">
-            <div class="principle">
-              <span>01</span>
-              <div>
-                <h3>Identity</h3>
-                <p>Every project needs a personality you can recognize.</p>
-              </div>
-            </div>
-            <div class="principle">
-              <span>02</span>
-              <div>
-                <h3>Play</h3>
-                <p>Visuals support gameplay. They never replace it.</p>
-              </div>
-            </div>
-            <div class="principle">
-              <span>03</span>
-              <div>
-                <h3>Craft</h3>
-                <p>We iterate, test and polish before we call something finished.</p>
-              </div>
-            </div>
-          </div>
+    <!-- =====================================================
+         STUDIO
+    ====================================================== -->
+    <section class="studio" id="studio">
+      <div class="studio-visual">
+        <div class="orbit"></div>
+        <div class="studio-word">ENIGMA</div>
+        <span>INDÉPENDANT · CRÉATIF · CURIEUX</span>
+      </div>
+      <div class="studio-copy">
+        <p class="section-number">03 / LE STUDIO</p>
+        <h2>Petit studio.<br><span>Grandes idées.</span></h2>
+        <p>
+          Enigma Studio est un studio indépendant qui commence par Roblox,
+          avec l'ambition de créer des jeux originaux et de construire,
+          projet après projet, une véritable identité de studio.
+        </p>
+        <p>
+          Nous avançons avec une équipe réduite, des idées ambitieuses
+          et l'envie de faire les choses proprement.
+        </p>
+        <div class="facts">
+          <div><strong>2024</strong><span>Création d'Enigma</span></div>
+          <div><strong>01</strong><span>Studio indépendant</span></div>
+          <div><strong>∞</strong><span>Idées à explorer</span></div>
         </div>
       </div>
     </section>
 
-    <!-- =========================================== -->
-    <!-- TEAM                                        -->
-    <!-- =========================================== -->
-    <section class="team section">
-      <div class="section-heading">
+    <!-- =====================================================
+         EQUIPE
+    ====================================================== -->
+    <section class="team" id="equipe">
+      <div class="section-head">
         <div>
-          <p class="eyebrow">People</p>
-          <h2>The team<span class="accent">.</span></h2>
-        </div>
-        <span class="section-index">04 / 05</span>
-      </div>
-
-      <div class="team-card" data-cursor="PROFILE">
-        <div class="team-avatar">
-          <span>S</span>
-        </div>
-        <div class="team-main">
-          <span class="project-number">FOUNDER / CREATIVE DIRECTOR</span>
-          <h3>Soso</h3>
-          <p>Direction / Development / UI & UX</p>
-        </div>
-        <div class="team-status">
-          <span class="status-dot"></span>
-          Building Enigma
+          <p class="section-number">04 / L'ÉQUIPE</p>
+          <h2>Les personnes<br><span>derrière Enigma.</span></h2>
         </div>
       </div>
-
-      <div class="recruit-note">
-        <span>ENIGMA IS GROWING</span>
-        <p>We're building the first team one project at a time.</p>
+      <div class="team-grid">
+        <article class="member">
+          <div class="avatar avatar-soso"><span>S</span></div>
+          <div><h3>Soso</h3><p>Fondateur · Direction créative · Développement</p></div>
+        </article>
+        <article class="member member-open">
+          <div class="avatar"><span>+</span></div>
+          <div><h3>Votre place ?</h3><p>Nous construisons l'équipe progressivement.</p></div>
+        </article>
       </div>
     </section>
 
-    <!-- =========================================== -->
-    <!-- CAREERS                                     -->
-    <!-- =========================================== -->
-    <section id="careers" class="careers section">
-      <div class="section-index">05 / 05</div>
-
-      <div class="careers-layout">
-        <div>
-          <p class="eyebrow">Careers</p>
-          <h2>Build something<br><em>worth remembering.</em></h2>
-        </div>
-
-        <div class="careers-copy">
-          <p class="large-copy">
-            Enigma is looking for people who care about making games with a
-            point of view. More positions will open as our projects grow.
-          </p>
-          <a class="outline-button magnetic" href="#contact">
-            <span>Talk to Enigma</span>
-            <span>↗</span>
-          </a>
-        </div>
+    <!-- =====================================================
+         RECRUTEMENT
+    ====================================================== -->
+    <section class="recruit" id="recrutement">
+      <div>
+        <p class="section-number">05 / RECRUTEMENT</p>
+        <h2>On construit<br><em>la suite.</em></h2>
+      </div>
+      <div class="recruit-copy">
+        <p>Nous cherchons des profils créatifs et motivés pour donner vie à nos prochains projets.</p>
+        <div class="roles"><span>Développeur</span><span>Artiste 3D</span><span>UI / UX</span><span>Game Designer</span></div>
+        <a class="button button-light" href="#contact">Parler avec Enigma <span>↗</span></a>
       </div>
     </section>
 
-    <!-- =========================================== -->
-    <!-- CONTACT                                     -->
-    <!-- =========================================== -->
-    <section id="contact" class="contact section">
-      <div class="contact-top">
-        <p class="eyebrow">Contact</p>
-        <span>Let's make something different.</span>
-      </div>
-
-      <a class="contact-email magnetic" href="mailto:contact@enigmagames.fr">
-        contact@enigmagames.fr
-      </a>
-
-      <div class="contact-bottom">
-        <span>Enigma Studio</span>
-        <span>Independent / France</span>
-        <span>© 2026 Enigma Studio</span>
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+    <section class="contact" id="contact">
+      <p class="section-number">06 / CONTACT</p>
+      <h2>Une idée ?<br><span>Parlons-en.</span></h2>
+      <p>Projet, collaboration ou envie de rejoindre l'aventure.</p>
+      <div class="contact-links">
+        <a href="https://discord.com" target="_blank" rel="noopener">Discord <span>↗</span></a>
+        <a href="https://github.com/27482374/EnigmaStudio" target="_blank" rel="noopener">GitHub <span>↗</span></a>
       </div>
     </section>
   </main>
 
-  <!-- ============================================= -->
-  <!-- FOOTER                                        -->
-  <!-- ============================================= -->
-  <footer class="site-footer">
-    <div class="footer-mark">E</div>
-    <div>
-      <strong>ENIGMA</strong>
-      <span>Independent Game Studio</span>
-    </div>
-    <a href="#top" class="magnetic">Back to top ↑</a>
+  <footer>
+    <div class="brand"><span class="brand-symbol">E</span><span>ENIGMA<br><small>STUDIO</small></span></div>
+    <p>© 2026 Enigma Studio · Tous droits réservés.</p>
+    <a href="#accueil">Retour en haut ↑</a>
   </footer>
 
-  <!-- ============================================= -->
-  <!-- JAVASCRIPT                                    -->
-  <!-- ============================================= -->
   <script src="main.js"></script>
 </body>
 </html>
