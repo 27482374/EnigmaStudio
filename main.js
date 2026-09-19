@@ -1,209 +1,65 @@
-/* ==================================================
-   ENIGMA STUDIO — MAIN JAVASCRIPT
-   ==================================================
+/* =========================================================
+   ENIGMA STUDIO — JAVASCRIPT
+   Animations légères : chargement + apparition au scroll
+========================================================= */
 
-   CONTENT MAP
-   --------------------------------------------------
-   01. Cursor
-   02. Cursor interactions
-   03. Magnetic links
-   04. Scroll reveals
-   05. Project cursor labels
-   06. Smooth navigation
-   ================================================== */
+const loader = document.querySelector("#loader");
 
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
+  setTimeout(() => loader?.classList.add("done"), 450);
+});
 
-  /* ==================================================
-     01 — CUSTOM CURSOR
-     ================================================== */
+/* ---------------------------------------------------------
+   Apparition progressive des sections
+--------------------------------------------------------- */
 
-  const cursor = document.querySelector(".cursor");
+const revealItems = document.querySelectorAll(
+  ".intro > div, .project-main, .project-card, .studio-copy, .member, .recruit-copy, .contact h2"
+);
 
-  // -----------------------------------------------
-  // The cursor follows the mouse with interpolation.
-  // This makes the movement feel less robotic.
-  // -----------------------------------------------
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add("revealed");
+    observer.unobserve(entry.target);
+  });
+}, { threshold: 0.12 });
 
-  if (cursor && window.matchMedia("(pointer: fine)").matches) {
+revealItems.forEach((item) => {
+  item.classList.add("reveal");
+  observer.observe(item);
+});
 
-    let mouseX = window.innerWidth / 2;
-    let mouseY = window.innerHeight / 2;
+/* ---------------------------------------------------------
+   Petit effet de parallaxe sur l'illustration tropicale
+--------------------------------------------------------- */
 
-    let currentX = mouseX;
-    let currentY = mouseY;
+const heroArt = document.querySelector(".hero-art");
 
-    window.addEventListener("mousemove", (event) => {
-      mouseX = event.clientX;
-      mouseY = event.clientY;
-    });
+window.addEventListener("mousemove", (event) => {
+  if (!heroArt || window.innerWidth < 850) return;
 
-    const animateCursor = () => {
+  const x = (event.clientX / window.innerWidth - 0.5) * 2;
+  const y = (event.clientY / window.innerHeight - 0.5) * 2;
 
-      // -------------------------------------------
-      // Change this number to make the cursor:
-      // 0.05 = very smooth
-      // 0.15 = fast
-      // -------------------------------------------
+  heroArt.style.transform = `translate(${x * 7}px, ${y * 5}px)`;
+});
 
-      currentX += (mouseX - currentX) * 0.12;
-      currentY += (mouseY - currentY) * 0.12;
+/* ---------------------------------------------------------
+   CSS d'apparition injecté ici pour garder le fichier simple
+--------------------------------------------------------- */
 
-      cursor.style.left = currentX + "px";
-      cursor.style.top = currentY + "px";
-
-      requestAnimationFrame(animateCursor);
-    };
-
-    animateCursor();
+const style = document.createElement("style");
+style.textContent = `
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1);
   }
 
-
-  /* ==================================================
-     02 — CURSOR INTERACTIONS
-     ================================================== */
-
-  const interactiveElements = document.querySelectorAll(
-    "a, [data-cursor]"
-  );
-
-  interactiveElements.forEach((element) => {
-
-    element.addEventListener("mouseenter", () => {
-      cursor?.classList.add("is-active");
-    });
-
-    element.addEventListener("mouseleave", () => {
-      cursor?.classList.remove("is-active");
-    });
-
-  });
-
-
-  /* ==================================================
-     03 — MAGNETIC LINKS
-     ================================================== */
-
-  const magneticElements = document.querySelectorAll(".magnetic");
-
-  magneticElements.forEach((element) => {
-
-    element.addEventListener("mousemove", (event) => {
-
-      // -------------------------------------------
-      // Magnetic strength.
-      // Increase this value for stronger movement.
-      // -------------------------------------------
-
-      const strength = 0.22;
-
-      const rect = element.getBoundingClientRect();
-
-      const x =
-        (event.clientX - rect.left - rect.width / 2) * strength;
-
-      const y =
-        (event.clientY - rect.top - rect.height / 2) * strength;
-
-      element.style.transform =
-        "translate(" + x + "px, " + y + "px)";
-    });
-
-    element.addEventListener("mouseleave", () => {
-      element.style.transform = "";
-    });
-
-  });
-
-
-  /* ==================================================
-     04 — SCROLL REVEALS
-     ================================================== */
-
-  const revealElements = document.querySelectorAll(".reveal");
-
-  const revealObserver = new IntersectionObserver(
-    (entries) => {
-
-      entries.forEach((entry) => {
-
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          revealObserver.unobserve(entry.target);
-        }
-
-      });
-
-    },
-    {
-      threshold: 0.15
-    }
-  );
-
-  revealElements.forEach((element) => {
-    revealObserver.observe(element);
-  });
-
-
-  /* ==================================================
-     05 — PROJECT CURSOR LABELS
-     ================================================== */
-
-  const projects = document.querySelectorAll("[data-cursor]");
-  const cursorLabel = document.querySelector(".cursor-label");
-
-  projects.forEach((project) => {
-
-    project.addEventListener("mouseenter", () => {
-
-      const label = project.dataset.cursor;
-
-      if (cursorLabel && label) {
-        cursorLabel.textContent = label;
-      }
-
-    });
-
-    project.addEventListener("mouseleave", () => {
-
-      if (cursorLabel) {
-        cursorLabel.textContent = "VIEW";
-      }
-
-    });
-
-  });
-
-
-  /* ==================================================
-     06 — SMOOTH NAVIGATION
-     ================================================== */
-
-  document.querySelectorAll('a[href^="#"]').forEach((link) => {
-
-    link.addEventListener("click", (event) => {
-
-      const targetId = link.getAttribute("href");
-
-      if (!targetId || targetId === "#") {
-        return;
-      }
-
-      const target = document.querySelector(targetId);
-
-      if (!target) {
-        return;
-      }
-
-      event.preventDefault();
-
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
-
-    });
-
-  });
-
-});
+  .revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+document.head.appendChild(style);
