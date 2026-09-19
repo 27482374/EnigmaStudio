@@ -1,0 +1,3 @@
+const reveal=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>reveal.observe(el));
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'})}}));
+const orbit=document.querySelector('.hero-orbit');window.addEventListener('pointermove',e=>{if(!orbit)return;const x=(e.clientX/innerWidth-.5)*14,y=(e.clientY/innerHeight-.5)*14;orbit.style.transform=`translate(${x}px,${y}px)`});
