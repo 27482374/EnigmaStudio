@@ -1,90 +1,209 @@
-<!-- ENIGMA STUDIO — PAGE PRINCIPALE
-     Structure : navigation, hero, projets, studio, process, équipe, contact.
-     Ce fichier contient uniquement la structure et le contenu de la page.
+<!-- ENIGMA STUDIO — SITE PRINCIPAL
+     Direction artistique : editorial / premium / glass architecture.
+     Structure : introduction, projets, studio, savoir-faire, équipe, contact.
 -->
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#090a0a">
-<meta name="description" content="Enigma Studio — studio indépendant de création de jeux et d'expériences interactives.">
-<title>Enigma Studio — Independent Game Studio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@0.468.0/font/lucide.css">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#11120f">
+  <meta name="description" content="Enigma Studio — studio indépendant de création de jeux et d'expériences interactives.">
+  <title>Enigma Studio — Creative Game Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@0.468.0/font/lucide.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-<div class="grain"></div><div class="ambient a1"></div><div class="ambient a2"></div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="orb orb-one" aria-hidden="true"></div>
+  <div class="orb orb-two" aria-hidden="true"></div>
 
-<!-- NAVIGATION -->
-<header class="nav glass">
-<a class="brand" href="#top"><span class="mark">E</span><span>ENIGMA <small>STUDIO</small></span></a>
-<nav><a href="#projects">Projets</a><a href="#studio">Studio</a><a href="#process">Process</a><a href="#team">Équipe</a></nav>
-<a class="nav-cta" href="#contact">Nous contacter <i class="icon icon-arrow-up-right"></i></a>
-</header>
+  <!-- HEADER : identité du studio + navigation -->
+  <header class="site-header glass">
+    <a class="logo" href="#top" aria-label="Enigma Studio">
+      <span class="logo-symbol">E</span>
+      <span class="logo-word">ENIGMA <small>STUDIO</small></span>
+    </a>
 
-<main id="top">
-<!-- HERO / POSITIONNEMENT -->
-<section class="hero">
-<div class="hero-copy reveal">
-<div class="eyebrow"><i></i> INDEPENDENT GAME STUDIO · FRANCE</div>
-<h1>Nous construisons<br><span>des expériences</span><br><em>qui restent.</em></h1>
-<p>Enigma Studio est un studio indépendant qui développe des jeux, des systèmes et des univers numériques. Peu de bruit. Beaucoup de travail.</p>
-<div class="actions"><a class="button" href="#projects">Explorer les projets <i class="icon icon-arrow-down"></i></a><a class="link" href="#studio">À propos du studio <i class="icon icon-arrow-up-right"></i></a></div>
-</div>
-<div class="hero-media reveal">
-<div class="photo-card glass"><img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=1200&q=85" alt="Setup de développement et de jeu vidéo" loading="eager"><div class="photo-shade"></div><div class="photo-top"><span>ENIGMA / 001</span><span>STUDIO LIFE</span></div><div class="photo-bottom"><span>BUILD · TEST · REPEAT</span><span>2024—2026</span></div></div>
-<div class="floating glass"><span>01</span><b>MAKING<br>GAMES.</b></div>
-</div>
-<div class="hero-meta"><span>SCROLL TO EXPLORE</span><i></i><span>EST. 2024</span></div>
-</section>
+    <nav class="desktop-nav" aria-label="Navigation principale">
+      <a href="#work">Work</a>
+      <a href="#studio">Studio</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#team">Équipe</a>
+    </nav>
 
-<!-- PROJETS -->
-<section id="projects" class="section">
-<div class="heading reveal"><div><span class="number">01</span><h2>Projets</h2></div><p>Ce que nous construisons<br>actuellement.</p></div>
-<article class="project glass reveal">
-<div class="project-photo"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1600&q=88" alt="Environnement de jeu vidéo" loading="lazy"><div class="photo-overlay"></div><div class="project-label"><span>01 / GAME</span><b>DOUBLE JUMP<br><em>TRAINING</em></b></div></div>
-<div class="project-info"><div class="chips"><span>ROBLOX</span><span>IN DEVELOPMENT</span></div><h3>Double Jump<br><em>Training</em></h3><p>Une expérience centrée sur une mécanique précise : lancer une bombe, prendre appui dessus et utiliser l'impulsion pour réaliser un double saut.</p><p>Le jeu est pensé comme un parcours d'apprentissage : plusieurs zones, des tests de maîtrise et une progression qui récompense la précision plutôt que la vitesse brute.</p><div class="skills"><span><i class="icon icon-gamepad-2"></i> GAMEPLAY</span><span><i class="icon icon-code-2"></i> SCRIPTING</span><span><i class="icon icon-panels-top-left"></i> UI / UX</span></div><a class="project-link" href="#contact">Suivre le projet <i class="icon icon-arrow-up-right"></i></a></div>
-</article>
-<div class="project-row"><div><span>02</span><b>PROCHAIN PROJET</b><small>CONCEPT · 2026</small></div><div><span>03</span><b>ARCHIVE</b><small>BIENTÔT</small></div></div>
-</section>
+    <a class="header-contact" href="#contact">Parlons du projet <i class="icon icon-arrow-up-right"></i></a>
+  </header>
 
-<!-- PRÉSENTATION DU STUDIO -->
-<section id="studio" class="section studio">
-<div class="heading reveal"><div><span class="number">02</span><h2>Le studio</h2></div></div>
-<div class="studio-grid">
-<div class="studio-image reveal"><img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=85" alt="Matériel et culture du jeu vidéo" loading="lazy"><span>THE WORK MATTERS.</span></div>
-<div class="studio-copy reveal"><h3>Petit studio.<br><em>Vraies ambitions.</em></h3><p>Enigma est né en 2024 autour d'une idée simple : prendre les projets au sérieux, même lorsqu'ils commencent petits.</p><p>Nous préférons une mécanique travaillée à une liste interminable de fonctionnalités. Une interface doit servir le jeu. Une direction artistique doit avoir une raison d'être.</p><p>Le studio est encore jeune et évolue progressivement. Notre site montre donc aussi le processus, les essais et les projets en construction.</p></div>
-</div>
-<div class="stats glass reveal"><div><b>2024</b><small>FOUNDING</small></div><div><b>01</b><small>ACTIVE PROJECT</small></div><div><b>03+</b><small>CREATIVE AREAS</small></div><div><b>FR</b><small>INDEPENDENT</small></div></div>
-</section>
+  <main id="top">
 
-<!-- MÉTHODE DE TRAVAIL -->
-<section id="process" class="section">
-<div class="heading reveal"><div><span class="number">03</span><h2>Process</h2></div><p>Une idée passe toujours<br>par le réel.</p></div>
-<div class="process">
-<div class="process-card glass reveal"><span>01</span><i class="icon icon-lightbulb"></i><h3>Concept</h3><p>On définit ce qui rend l'idée intéressante avant d'ajouter quoi que ce soit.</p></div>
-<div class="process-card glass reveal"><span>02</span><i class="icon icon-code-2"></i><h3>Prototype</h3><p>Une version jouable permet de vérifier rapidement si la mécanique fonctionne.</p></div>
-<div class="process-card glass reveal"><span>03</span><i class="icon icon-panels-top-left"></i><h3>Direction</h3><p>Visuels, interface, rythme et détails construisent une identité cohérente.</p></div>
-<div class="process-card glass reveal"><span>04</span><i class="icon icon-refresh-cw"></i><h3>Itération</h3><p>Tester, corriger, simplifier. Le projet avance grâce aux retours réels.</p></div>
-</div>
-</section>
+    <!-- HERO : première impression volontairement très visuelle -->
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="kicker"><span></span> INDEPENDENT CREATIVE STUDIO · FRANCE</p>
+          <h1>Games with<br><i>character.</i></h1>
+          <p class="hero-intro">Nous imaginons et développons des expériences interactives avec une obsession pour le détail, le rythme et une identité qui ne ressemble pas aux autres.</p>
 
-<!-- ÉQUIPE -->
-<section id="team" class="section">
-<div class="heading reveal"><div><span class="number">04</span><h2>Équipe</h2></div><p>Une petite équipe aujourd'hui.<br>Un studio en construction.</p></div>
-<div class="person glass reveal"><div class="person-photo"><img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=400&q=85" alt="Portrait de profil" loading="lazy"></div><div><span class="role">FOUNDER · CREATIVE · DEVELOPER</span><h3>Soso</h3><p>Scripting · UI/UX · Direction créative</p></div><div class="person-side">ENIGMA<br>STUDIO</div></div>
-<div class="join reveal"><div><span>BUILD WITH US</span><h3>Le studio va grandir.</h3></div><p>Nous voulons réunir progressivement des profils capables de créer, tester et améliorer des projets ensemble.</p><a href="#contact">Parler avec Enigma <i class="icon icon-arrow-up-right"></i></a></div>
-</section>
+          <div class="hero-actions">
+            <a class="primary-button" href="#work">Découvrir notre travail <i class="icon icon-arrow-down-right"></i></a>
+            <a class="text-button" href="#studio">En savoir plus <i class="icon icon-arrow-right"></i></a>
+          </div>
+        </div>
 
-<!-- CONTACT -->
-<section id="contact" class="contact reveal">
-<span class="number">05</span><h2>Un projet ?<br><em>Parlons-en.</em></h2><p>Collaboration, recrutement, idée ou simple discussion autour du développement : écrivez-nous.</p>
-<a class="email" href="mailto:contact@enigmasterudio.fr">contact@enigmasterudio.fr <i class="icon icon-arrow-up-right"></i></a>
-</section>
-</main>
-<footer><div><b>ENIGMA STUDIO</b><span>Independent game studio · France</span></div><div><span>© 2026</span><a href="#top">Retour ↑</a></div></footer>
-<script src="main.js" defer></script>
-</body></html>
+        <div class="hero-visual reveal">
+          <div class="hero-image glass">
+            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1400&q=88" alt="Univers de jeu vidéo" loading="eager">
+            <div class="image-glow"></div>
+            <div class="image-caption">
+              <span>ENIGMA / VISUAL 001</span>
+              <span>CREATE · PLAY · REPEAT</span>
+            </div>
+          </div>
+          <div class="hero-card glass">
+            <span>01</span>
+            <strong>MAKE<br>IT<br>MEMORABLE.</strong>
+            <i class="icon icon-arrow-down-left"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-bottom">
+        <span>EST. 2024 — INDEPENDENT</span>
+        <span>SCROLL TO EXPLORE ↓</span>
+        <span>FR / WORLDWIDE</span>
+      </div>
+    </section>
+
+    <!-- WORK : le projet principal est présenté comme une pièce éditoriale -->
+    <section id="work" class="section work">
+      <div class="section-head reveal">
+        <div><span class="section-index">01</span><h2>Selected work</h2></div>
+        <p>Des projets construits autour<br>d'une idée forte.</p>
+      </div>
+
+      <article class="featured-project glass reveal">
+        <div class="project-image">
+          <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1800&q=88" alt="Environnement de jeu vidéo" loading="lazy">
+          <div class="project-image-overlay"></div>
+          <div class="project-stamp">ENIGMA<br>PROJECT 01</div>
+          <div class="project-name"><span>ROBLOX · GAMEPLAY EXPERIENCE</span><h3>Double Jump<br><i>Training</i></h3></div>
+        </div>
+
+        <div class="project-content">
+          <div class="project-meta"><span>IN DEVELOPMENT</span><span>2026</span></div>
+          <p class="project-lead">Une expérience d'entraînement construite autour d'une mécanique simple à comprendre, mais difficile à maîtriser.</p>
+          <p>Le joueur lance une bombe, prend appui dessus et transforme son impulsion en double saut. Les zones deviennent progressivement plus exigeantes : timing, précision, trajectoire et lecture de l'environnement.</p>
+
+          <div class="project-details">
+            <div><span>01</span><b>Gameplay</b><small>Core mechanics</small></div>
+            <div><span>02</span><b>Scripting</b><small>Systems & logic</small></div>
+            <div><span>03</span><b>UI / UX</b><small>Interface & flow</small></div>
+          </div>
+
+          <a class="outline-button" href="#contact">À propos du projet <i class="icon icon-arrow-up-right"></i></a>
+        </div>
+      </article>
+
+      <div class="coming-soon reveal">
+        <span>02</span><div><b>MORE IS COMING</b><small>OTHER PROJECTS · 2026</small></div>
+        <i class="icon icon-arrow-up-right"></i>
+      </div>
+    </section>
+
+    <!-- STUDIO : vision et identité plutôt qu'un bloc corporate classique -->
+    <section id="studio" class="section studio">
+      <div class="section-head reveal">
+        <div><span class="section-index">02</span><h2>The studio</h2></div>
+        <p>Petit par la taille.<br>Grand par l'attention.</p>
+      </div>
+
+      <div class="studio-layout">
+        <div class="studio-poster glass reveal">
+          <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=1200&q=88" alt="Poste de création et de jeu vidéo" loading="lazy">
+          <div class="poster-copy"><span>ENIGMA STUDIO</span><b>DETAIL<br>MATTERS.</b></div>
+          <div class="poster-number">24—26</div>
+        </div>
+
+        <div class="studio-text reveal">
+          <p class="big-copy">Enigma est un studio indépendant né d'une envie simple : <i>faire des expériences avec une vraie personnalité.</i></p>
+          <div class="text-columns">
+            <p>Nous travaillons à petite échelle, ce qui permet de rester proches de chaque détail. Une mécanique, une transition, une interface ou un son peuvent changer la façon dont un joueur ressent une expérience.</p>
+            <p>Le studio évolue progressivement autour du développement, du design et de la direction créative. Nous préférons construire moins de choses, mais leur donner une vraie intention.</p>
+          </div>
+          <div class="studio-signature"><span>FOUNDED</span><b>2024</b><span>BASED IN FRANCE</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERTISE : cartes vitrées avec vraie hiérarchie visuelle -->
+    <section id="expertise" class="section expertise">
+      <div class="section-head reveal">
+        <div><span class="section-index">03</span><h2>What we do</h2></div>
+        <p>Les disciplines qui<br>font nos projets.</p>
+      </div>
+
+      <div class="expertise-grid">
+        <article class="expertise-card glass reveal"><span>01</span><i class="icon icon-gamepad-2"></i><h3>Game<br>Design</h3><p>Mécaniques, progression, rythme et expérience joueur.</p><a href="#contact">Explorer <i class="icon icon-arrow-up-right"></i></a></article>
+        <article class="expertise-card glass reveal"><span>02</span><i class="icon icon-code-2"></i><h3>Systems<br>& Code</h3><p>Scripting, systèmes de jeu, logique et prototypes jouables.</p><a href="#contact">Explorer <i class="icon icon-arrow-up-right"></i></a></article>
+        <article class="expertise-card glass reveal"><span>03</span><i class="icon icon-panels-top-left"></i><h3>UI / UX<br>Design</h3><p>Interfaces claires, direction visuelle et parcours cohérents.</p><a href="#contact">Explorer <i class="icon icon-arrow-up-right"></i></a></article>
+        <article class="expertise-card glass reveal"><span>04</span><i class="icon icon-sparkles"></i><h3>Creative<br>Direction</h3><p>Une identité globale pour donner au projet une présence unique.</p><a href="#contact">Explorer <i class="icon icon-arrow-up-right"></i></a></article>
+      </div>
+    </section>
+
+    <!-- PROCESS : lecture horizontale et minimaliste -->
+    <section class="section process-section">
+      <div class="section-head reveal">
+        <div><span class="section-index">04</span><h2>How we work</h2></div>
+        <p>De l'idée au moment<br>où tout fonctionne.</p>
+      </div>
+
+      <div class="process-line">
+        <article class="process-step reveal"><span>01</span><h3>Think</h3><p>Définir l'idée, le joueur et ce qui rend le projet intéressant.</p></article>
+        <article class="process-step reveal"><span>02</span><h3>Build</h3><p>Créer une première version suffisamment réelle pour être testée.</p></article>
+        <article class="process-step reveal"><span>03</span><h3>Refine</h3><p>Observer, simplifier, corriger et pousser les détails qui comptent.</p></article>
+        <article class="process-step reveal"><span>04</span><h3>Release</h3><p>Donner au projet une forme finale cohérente et prête à être vécue.</p></article>
+      </div>
+    </section>
+
+    <!-- TEAM : section humaine, sans faux organigramme -->
+    <section id="team" class="section team">
+      <div class="section-head reveal">
+        <div><span class="section-index">05</span><h2>The people</h2></div>
+        <p>Une équipe réduite.<br>Une direction claire.</p>
+      </div>
+
+      <div class="person glass reveal">
+        <div class="person-photo"><img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=500&q=88" alt="Portrait" loading="lazy"></div>
+        <div class="person-main"><span>FOUNDER · CREATIVE · DEVELOPER</span><h3>Soso</h3><p>Scripting · UI/UX · Direction créative</p></div>
+        <div class="person-note">ENIGMA<br>STUDIO</div>
+      </div>
+
+      <div class="team-note reveal">
+        <span>01 / CURRENTLY</span>
+        <p>Enigma est encore en construction. Le studio grandira autour de personnes qui veulent réellement créer des choses, pas simplement remplir des rôles.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT : conclusion très visuelle -->
+    <section id="contact" class="contact reveal">
+      <div class="contact-top"><span>06</span><span>LET'S MAKE SOMETHING</span></div>
+      <h2>Have an idea?<br><i>Let's build it.</i></h2>
+      <p>Projet, collaboration, recrutement ou simplement envie de parler création.</p>
+      <a class="contact-mail" href="mailto:contact@enigmasterudio.fr">contact@enigmasterudio.fr <i class="icon icon-arrow-up-right"></i></a>
+    </section>
+  </main>
+
+  <!-- FOOTER : informations essentielles, sans surcharge -->
+  <footer>
+    <div><b>ENIGMA STUDIO</b><span>Independent creative studio · France</span></div>
+    <div><span>© 2026</span><a href="#top">Back to top ↑</a></div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
