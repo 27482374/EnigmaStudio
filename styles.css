@@ -290,3 +290,10 @@ footer div{display:flex;gap:28px}footer b{color:#9c9ca2}footer a{text-decoration
   .contact{width:calc(100% - 50px);margin-bottom:90px}.contact-glass{padding:50px 25px}.contact h2{font-size:62px}
   footer{flex-direction:column;gap:15px}
 }
+
+
+/* FINAL PALETTE LOCK — aucun accent chromatique */
+html,body{background:#050505!important;color:#f5f5f7!important}
+.light,.light-a,.light-b{background:#fff!important;opacity:.025!important}
+.hero-glass img,.game-art img,.studio-image img,.person-photo img{filter:grayscale(1)!important;saturate:0!important;mix-blend-mode:normal!important}
+.glass,.hero-glass,.game,.craft-card,.step,.person,.recruit,.contact-glass,.quote-glass{background-color:rgba(255,255,255,.035)!important}
