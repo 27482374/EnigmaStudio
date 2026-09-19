@@ -20,7 +20,7 @@ document.querySelectorAll(".reveal").forEach((element, index) => {
 
 /* Petit mouvement de profondeur sur l'image principale.
    requestAnimationFrame évite de modifier le DOM à chaque événement souris. */
-const heroCard = document.querySelector(".photo-card");
+const heroCard = document.querySelector(".hero-glass");
 let pointerX = 0, pointerY = 0, raf = 0;
 
 window.addEventListener("pointermove", ({ clientX, clientY }) => {
