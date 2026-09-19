@@ -1,1 +1,45 @@
-
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ENIGMA — STUDIO</title>
+<meta name="description" content="Enigma Studio — systèmes, interfaces et expériences Roblox.">
+<style>
+:root{--bg:#11161a;--paper:#e9e4da;--muted:#9ba5a8;--steel:#6b8795;--copper:#d7865f;--acid:#d9dfb8;--line:#293238}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--paper);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;background-image:radial-gradient(#fff .7px,transparent .7px);background-size:5px 5px;z-index:10}.grid{position:fixed;inset:0;pointer-events:none;background:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:90px 90px;opacity:.18;mask-image:linear-gradient(to bottom,black,transparent 80%)}.wrap{width:min(1180px,calc(100% - 42px));margin:auto}nav{height:92px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:relative;z-index:2}.logo{font-weight:900;letter-spacing:.18em}.logo span{color:var(--copper)}nav a{color:var(--muted);text-decoration:none;margin-left:28px;font-size:12px;text-transform:uppercase;letter-spacing:.16em}nav a:hover{color:var(--paper)}
+.hero{min-height:760px;display:grid;align-items:center;position:relative}.hero h1{font-size:clamp(72px,15vw,190px);line-height:.76;margin:0;letter-spacing:-.075em;font-weight:900;max-width:950px}.hero h1 em{font-style:normal;color:var(--copper)}.hero p{max-width:570px;color:var(--muted);font-size:17px;line-height:1.65;margin:48px 0 0 7px}.stamp{position:absolute;right:0;top:155px;width:155px;height:155px;border:1px solid var(--steel);border-radius:50%;display:grid;place-items:center;color:var(--acid);font-size:10px;letter-spacing:.18em;text-align:center;transform:rotate(12deg)}.stamp:after{content:"";position:absolute;width:8px;height:8px;background:var(--copper);border-radius:50%;top:17px;right:18px}.scan{height:1px;background:var(--copper);position:absolute;left:0;right:0;bottom:75px;opacity:.6}
+section{padding:125px 0;border-top:1px solid var(--line)}.eyebrow{font-size:10px;letter-spacing:.22em;color:var(--copper);text-transform:uppercase;margin-bottom:34px}.intro{display:grid;grid-template-columns:1fr 2fr;gap:60px}.intro h2{font-size:clamp(38px,5vw,70px);letter-spacing:-.05em;margin:0}.intro p{font-size:21px;line-height:1.55;color:#c1c5c3;margin:0;max-width:760px}.services{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin-top:80px}.service{background:var(--bg);padding:34px;min-height:260px}.num{color:var(--steel);font-size:12px}.service h3{font-size:28px;margin:55px 0 16px}.service p{color:var(--muted);line-height:1.6}.work{display:grid;grid-template-columns:1.25fr .75fr;gap:18px}.card{border:1px solid var(--line);min-height:330px;padding:28px;position:relative;overflow:hidden}.card:before{content:"";position:absolute;width:260px;height:260px;border:1px solid var(--steel);border-radius:50%;right:-90px;bottom:-110px;box-shadow:0 0 0 35px rgba(107,135,149,.05),0 0 0 70px rgba(107,135,149,.03)}.card.big{min-height:500px}.tag{font-size:10px;letter-spacing:.16em;color:var(--acid)}.card h3{font-size:38px;letter-spacing:-.04em;margin-top:120px}.card.small h3{margin-top:75px;font-size:29px}.statement{font-size:clamp(38px,6vw,82px);line-height:.95;letter-spacing:-.055em;max-width:1000px}.statement span{color:var(--steel)}.contact{display:flex;justify-content:space-between;gap:30px;align-items:end}.contact h2{font-size:clamp(50px,9vw,125px);line-height:.8;letter-spacing:-.07em;margin:0}.contact a{display:inline-block;color:var(--bg);background:var(--paper);padding:17px 23px;text-decoration:none;font-weight:800;letter-spacing:.12em;font-size:11px}.contact a:hover{background:var(--copper)}footer{padding:28px 0 45px;color:#697378;font-size:11px;display:flex;justify-content:space-between}
+.reveal{opacity:0;transform:translateY(25px);transition:.8s ease}.reveal.on{opacity:1;transform:none}
+@media(max-width:760px){nav a{display:none}.hero{min-height:650px}.stamp{top:110px;right:0;width:105px;height:105px}.intro,.work{grid-template-columns:1fr}.services{grid-template-columns:1fr}.service{min-height:210px}.card.big{min-height:360px}.contact{display:block}.contact a{margin-top:50px}section{padding:90px 0}}
+</style>
+</head>
+<body>
+<div class="grid"></div>
+<div class="wrap">
+<nav><div class="logo">ENIGMA<span>•</span>STUDIO</div><div><a href="#studio">Studio</a><a href="#work">Travaux</a><a href="#contact">Contact</a></div></nav>
+<main>
+<section class="hero" style="border:0">
+<div><div class="eyebrow">Digital studio / 2026</div><h1>ENIGMA<br><em>STUDIO.</em></h1><p>Nous concevons des expériences interactives qui ont leur propre langage. Interfaces, systèmes et expériences Roblox — pensés comme des produits, pas comme des templates.</p></div>
+<div class="stamp">BUILT<br>DIFFERENT<br>01 — 26</div><div class="scan"></div>
+</section>
+<section id="studio"><div class="eyebrow reveal">01 / Studio</div><div class="intro reveal"><h2>Pas juste<br>du Roblox.</h2><p>Enigma transforme des idées en expériences cohérentes. On travaille le système, l'interface et le détail visuel pour créer une identité reconnaissable dès la première seconde.</p></div>
+<div class="services">
+<div class="service reveal"><div class="num">01 — SYSTEMS</div><h3>Systems</h3><p>Mécaniques, interactions, progression et systèmes de jeu conçus pour être propres et fiables.</p></div>
+<div class="service reveal"><div class="num">02 — INTERFACE</div><h3>Interface</h3><p>UI sur mesure, HUD et menus avec une direction visuelle qui appartient au projet.</p></div>
+<div class="service reveal"><div class="num">03 — DIRECTION</div><h3>Direction</h3><p>Une identité visuelle cohérente, du premier écran jusqu'aux détails que personne ne remarque immédiatement.</p></div>
+</div></section>
+<section id="work"><div class="eyebrow reveal">02 / Selected work</div><div class="work">
+<div class="card big reveal"><div class="tag">SYSTEM / INTERACTION</div><h3>Generator<br>Hold-E</h3></div>
+<div><div class="card small reveal"><div class="tag">UI / INSPECTION</div><h3>Inspection</h3></div><div class="card small reveal" style="margin-top:18px"><div class="tag">EXPERIMENTAL</div><h3>Enigma Lab</h3></div></div>
+</div></section>
+<section><div class="eyebrow reveal">03 / Philosophy</div><div class="statement reveal">Une bonne expérience ne ressemble pas à une bibliothèque de composants. <span>Elle ressemble à quelque chose qui n'existait pas avant.</span></div></section>
+<section id="contact"><div class="eyebrow reveal">04 / Contact</div><div class="contact reveal"><h2>LET'S<br>MAKE<br>IT.</h2><a href="https://discord.com/" target="_blank" rel="noreferrer">OPEN DISCORD ↗</a></div></section>
+</main>
+<footer><span>ENIGMA STUDIO — 2026</span><span>ROBLOX / DIGITAL EXPERIENCES</span></footer>
+</div>
+<script>
+const els=document.querySelectorAll('.reveal');const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.12});els.forEach(e=>io.observe(e));
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'})}));
+</script>
+</body></html>
